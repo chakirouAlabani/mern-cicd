@@ -1,0 +1,15 @@
+name: MERN checks and image delivery
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the project files
+        uses: actions/checkout@v7
